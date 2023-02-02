@@ -1,0 +1,24 @@
+<div class="body-for-homepage">
+  <section class="section-homepage">
+    <div class="left"></div>
+    <div class="right">
+      <img class="intro-picture" src="/images/intropicture.png">
+    </div> 
+    <img class="logo" src="/images/logo3.png" alt="logo">
+  </section>
+
+  <section class="section-new-additions">
+    <h2>Newest additions for sale!!!</h2>
+    <div class="container-new-additions">
+      {{#each cars as |car| }}
+
+      <div class="new-addition">
+        <a href="/car/{{car.id}}"><img src="/images/{{car.id}}/1.jpg" alt="model and year"></a>
+        <a href="/car/{{car.id}}">{{car.year}} {{car.make}} {{car.model}}</a>
+      </div>
+
+      {{/each}}
+    </div>
+    <a href="/carlist" class="see-all">See more</a>
+  </section>
+</div>
